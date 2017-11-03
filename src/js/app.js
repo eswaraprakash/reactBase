@@ -1,7 +1,7 @@
 //App.js
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import '../css/style.css';
+import '../css/style.less';
 
 import jsImage from '../assets/js.png';
 

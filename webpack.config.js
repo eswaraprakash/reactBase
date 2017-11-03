@@ -25,14 +25,18 @@ module.exports = {
                     'babel-loader',
                 ],
             },
-            // CSS loader to CSS files -> ADDED IN THIS STEP
-            // Files will get handled by css loader and then passed to the extract text plugin
+            // LESS and CSS loader
+            // Files will get handled by less loader and then passed to the extract text plugin
             // which will write it to the file we defined above
             {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract({
-                    use: 'css-loader',
-                }),
+                test: /\.less$/,
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "less-loader" // compiles Less to CSS
+                }]
             },
             // File loader for image assets -> ADDED IN THIS STEP
             // We'll add only image extensions, but you can things like svgs, fonts and videos
