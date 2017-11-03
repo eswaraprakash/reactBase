@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // Constant with our paths
 const paths = {
     DIST: path.resolve(__dirname, 'dist'),
@@ -41,7 +42,7 @@ module.exports = {
             // File loader for image assets -> ADDED IN THIS STEP
             // We'll add only image extensions, but you can things like svgs, fonts and videos
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpeg|jpg|gif)$/,
                 use: [
                     'file-loader',
                 ],
@@ -70,5 +71,8 @@ module.exports = {
             template: path.join(paths.SRC, 'index.html'),
         }),
         new ExtractTextPlugin('style.bundle.css'),
+        new CopyWebpackPlugin([
+            {from:'src/assets',to:'images'}
+        ]),
     ]
 };
