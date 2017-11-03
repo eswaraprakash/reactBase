@@ -10,7 +10,9 @@ export default class Hello extends Component {
         return (
             <div>
                 React Base framework
-                <img src={jsImage} alt='CommanderJS' />
+                <div>
+                    <img src={jsImage} alt='CommanderJS' />
+                </div>
             </div>
         );
     }
