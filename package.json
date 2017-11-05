@@ -4,7 +4,7 @@
     "description": "Base Environment for React package",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "mocha",
         "build": "webpack -p --progress --profile --colors",
         "dev": "webpack-dev-server --progress --colors --watch"
     },
@@ -46,8 +46,5 @@
     "dependencies": {
         "react": "^15.4.2",
         "react-dom": "^15.4.2"
-    },
-    "scripts": {
-        "test": "mocha"
     }
 }
