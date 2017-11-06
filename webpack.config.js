@@ -61,7 +61,7 @@ module.exports = {
     },
     devServer: {
         port: 3000,
-        contentBase: paths.SRC,
+        //contentBase: paths.SRC,
     },
     plugins: [
         new webpack.DefinePlugin({

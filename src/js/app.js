@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import '../css/style.less';
 
-import jsImage from '../assets/js.png';
 
 export default class Hello extends Component {
     render(){
@@ -11,7 +10,7 @@ export default class Hello extends Component {
             <div>
                 React Base framework
                 <div>
-                    <img src={jsImage} alt='CommanderJS' />
+                    <img src='images/js.png' alt='CommanderJS' />
                 </div>
             </div>
         );
